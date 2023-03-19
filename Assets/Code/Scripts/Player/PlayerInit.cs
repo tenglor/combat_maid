@@ -11,7 +11,7 @@ public class PlayerInit : MonoBehaviour
     public Groudable groudable;
     public IInputService inputService;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         groudable = new Groudable(groundCheck, layerMask);
         inputService = new DesktopInputService();
