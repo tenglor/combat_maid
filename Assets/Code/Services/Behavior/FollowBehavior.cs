@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class FollowBehavior{
+public class FollowBehavior {
 
     private Transform _followObject;
     private Transform _transform;
@@ -10,6 +10,7 @@ public class FollowBehavior{
         _transform = transform;
         _followObject  = followObject;
     }
+    
 
     public Vector2 getDirection(){
         var result = _followObject.position - _transform.position;
