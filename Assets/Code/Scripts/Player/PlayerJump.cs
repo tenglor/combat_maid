@@ -35,8 +35,9 @@ public class PlayerJump : MonoBehaviour
     void Update()
     {
         if (inputService.isJumpPressed && currentJumpCharges > 0){
-            //rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-            rb.velocity = new Vector2(rb.velocity.x, 0);
+            if(!onGround){
+                rb.velocity = new Vector2(rb.velocity.x, -jumpPower/4);
+            }
             rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             currentJumpCharges--;
         }
