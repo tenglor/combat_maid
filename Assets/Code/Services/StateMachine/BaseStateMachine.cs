@@ -6,7 +6,7 @@ namespace Services.StateMachine
 {
     public class BaseStateMachine : MonoBehaviour
     {
-    [SerializeField] private BaseState _initialState;
+        [SerializeField] private BaseState _initialState;
 
         private void Awake()
         {

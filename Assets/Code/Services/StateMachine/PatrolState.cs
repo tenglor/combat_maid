@@ -1,4 +1,4 @@
-//using Services.StateMachine.Enemy;
+//using Service s.StateMachine.Enemy;
 //using Services.StateMachine.FSM;
 using UnityEngine;
 using UnityEngine.AI;
@@ -10,11 +10,11 @@ namespace Services.StateMachine
     {
         public override void Execute(BaseStateMachine stateMachine)
         {
-            var navMeshAgent = stateMachine.GetComponent<NavMeshAgent>();
-            //var patrolPoints = stateMachine.GetComponent<PatrolPoints>();
+            //var navMeshAgent = stateMachine.GetComponent<NavMeshAgent>();
+            var patrolPoints = stateMachine.GetComponent<PatrolPoints>();
 
-            // if (patrolPoints.HasReached(navMeshAgent))
-            //     navMeshAgent.SetDestination(patrolPoints.GetNext().position);
+            //if (patrolPoints.HasReached(navMeshAgent))
+            //     navMeshAgent.SetDestination(patrolPoints.GetNext());
         }
     }
 }
