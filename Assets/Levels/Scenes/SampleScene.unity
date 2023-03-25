@@ -739,7 +739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: -8.06, y: -3, z: 0}
+  - {x: -7.94, y: -3, z: 0}
   - {x: -2.97, y: -3, z: 0}
   - {x: -2.97, y: -1.76, z: 0}
   - {x: -7.94, y: -1.76, z: 0}
@@ -750,9 +750,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869033811}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ba0beadbff9d9c47a36e9ce2b91bcfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialState: {fileID: 11400000, guid: 10b1c451a885f6a47ad92eb8d0dbe82d, type: 2}
+  _initialState: {fileID: 0}

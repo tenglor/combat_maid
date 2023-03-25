@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1ca90c5d167787394bdd12be24ae76, type: 3}
   m_Name: GhostPatrolState
   m_EditorClassIdentifier: 
-  Action:
-  - {fileID: 11400000, guid: b885e86194a8cb043ade32e3391f8a03, type: 2}
+  Action: []
   Transitions: []

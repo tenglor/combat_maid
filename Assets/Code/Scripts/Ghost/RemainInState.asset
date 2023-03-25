@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43c11a4e8c0d36608c5d67158396edb, type: 3}
-  m_Name: GhostPatrol
+  m_Script: {fileID: 11500000, guid: 76d9692859cc16fdb8325976c3264218, type: 3}
+  m_Name: RemainInState
   m_EditorClassIdentifier: 
