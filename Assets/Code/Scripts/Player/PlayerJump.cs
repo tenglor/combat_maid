@@ -18,8 +18,8 @@ public class PlayerJump : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inputService = GetComponent<PlayerInit>().inputService;
-        groudable = GetComponent<PlayerInit>().groudable;
+        inputService = GetComponent<PlayerController>().inputService;
+        groudable = GetComponent<PlayerController>().groudable;
         onGround = groudable.onGround;
     }
 

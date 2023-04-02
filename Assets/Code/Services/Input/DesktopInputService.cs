@@ -5,7 +5,7 @@ public class DesktopInputService : IInputService
     public const string Horisontal = "Horizontal";
     public const string Vertical = "Vertical";
     public const KeyCode jumpButton = KeyCode.Space;
-    public const KeyCode lampButton = KeyCode.C;
+    public const KeyCode attackButton = KeyCode.Z;
 
     public Vector2 Axis => SetDesktopAxis();
 
@@ -13,4 +13,6 @@ public class DesktopInputService : IInputService
         new Vector2(UnityEngine.Input.GetAxis(Horisontal), UnityEngine.Input.GetAxis(Vertical));
 
     public bool isJumpPressed => UnityEngine.Input.GetKeyDown(jumpButton);
+
+    public bool isAttackPressed => UnityEngine.Input.GetKeyDown(attackButton);
 }

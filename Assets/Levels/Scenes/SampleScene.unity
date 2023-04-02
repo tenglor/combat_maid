@@ -352,8 +352,8 @@ GameObject:
   - component: {fileID: 913304358}
   - component: {fileID: 913304362}
   - component: {fileID: 913304361}
-  - component: {fileID: 913304364}
-  - component: {fileID: 913304360}
+  - component: {fileID: 913304367}
+  - component: {fileID: 913304366}
   - component: {fileID: 913304363}
   m_Layer: 0
   m_Name: player
@@ -361,7 +361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &913304358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913304357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.205581, y: -0.03747846, z: 0}
+  m_LocalPosition: {x: -5.57, y: -3.09, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -430,20 +430,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &913304360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913304357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01da85ae0b97c6d89b50ca1eee775f87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 913304362}
-  speed: 7
 --- !u!61 &913304361
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -507,7 +493,7 @@ MonoBehaviour:
   jumpPower: 20
   currentJumpCharges: 0
   rb: {fileID: 913304362}
---- !u!114 &913304364
+--- !u!114 &913304366
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -516,13 +502,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 913304357}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2623472bd01bb96d1be1e2f8cc80ec63, type: 3}
+  m_Script: {fileID: 11500000, guid: e54fc491b3830a6498c9109f5694199f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialState: {fileID: 11400000, guid: 336d239b3f8e24e46810add94ed60a7b, type: 2}
+--- !u!114 &913304367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913304357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff73b1fd81ccadf4592443e2ef31fa02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   layerMask:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 1456403882}
+  attackTimeout: 0.7
+  currentTime: 0
+  states:
+  - {fileID: 11400000, guid: 336d239b3f8e24e46810add94ed60a7b, type: 2}
+  - {fileID: 11400000, guid: 152ce9c378ff422429635a5a2fbef3d6, type: 2}
 --- !u!1 &1456403881
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +572,6 @@ GameObject:
   - component: {fileID: 1869033812}
   - component: {fileID: 1869033816}
   - component: {fileID: 1869033817}
-  - component: {fileID: 1869033821}
   - component: {fileID: 1869033820}
   m_Layer: 0
   m_Name: ghost_0
@@ -576,7 +579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1869033812
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -743,16 +746,3 @@ MonoBehaviour:
   - {x: -2.97, y: -3, z: 0}
   - {x: -2.97, y: -1.76, z: 0}
   - {x: -7.94, y: -1.76, z: 0}
---- !u!114 &1869033821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869033811}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba0beadbff9d9c47a36e9ce2b91bcfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialState: {fileID: 0}

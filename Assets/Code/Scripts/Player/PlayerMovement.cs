@@ -1,30 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Services.StateMachine;
 
-public class PlayerMovement : MonoBehaviour
+[CreateAssetMenu(menuName = "FSM/Player/Movement")]
+public class PlayerMovement : BaseState
 {
     private IInputService inputService;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     public float speed;
 
-    // Start is called before the first frame update
-    void Start()
+    public override void Enter(StateMachine stateMachine)
     {
-        inputService = GetComponent<PlayerInit>().inputService;
+        rb = stateMachine.GetComponent<Rigidbody2D>();
+        inputService = stateMachine.GetComponent<PlayerController>().inputService;
     }
 
     // Update is called once per frame
-    void Update()
+    public override void UpdatePhysics(StateMachine stateMachine)
     {
         float speedX = inputService.Axis.x * speed;
         rb.velocity = new Vector2(speedX, rb.velocity.y);
-        if (Mathf.Abs(speedX) > 0.01) {
-            Vector3 theScale = transform.localScale;
+        if (Mathf.Abs(speedX) > 0.01)
+        {
+            Vector3 theScale = rb.transform.localScale;
             //зеркально отражаем персонажа по оси Х
             theScale.x = Mathf.Abs(theScale.x) * Mathf.Sign(speedX);
             //задаем новый размер персонажа, равный старому, но зеркально отраженный
-            transform.localScale = theScale;
+            rb.transform.localScale = theScale;
         }
     }
 }

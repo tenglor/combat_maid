@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de1ca90c5d167787394bdd12be24ae76, type: 3}
-  m_Name: GhostPatrolState
+  m_Script: {fileID: 11500000, guid: 01da85ae0b97c6d89b50ca1eee775f87, type: 3}
+  m_Name: PlayerMovement
   m_EditorClassIdentifier: 
-  Action:
-  - {fileID: 11400000, guid: b885e86194a8cb043ade32e3391f8a03, type: 2}
-  Transitions:
-  - {fileID: 0}
+  stateMachine: {fileID: 0}
+  speed: 7
