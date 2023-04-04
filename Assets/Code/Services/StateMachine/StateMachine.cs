@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Services.StateMachine
+namespace Assets.Code.Services.StateMachine
 {
     public class StateMachine : MonoBehaviour
     {

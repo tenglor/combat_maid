@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Services.StateMachine;
+using Assets.Code.Services.StateMachine;
 
 [CreateAssetMenu(menuName = "FSM/Player/Movement")]
 public class PlayerMovement : BaseState
