@@ -33,11 +33,6 @@ namespace Assets.Code.Services.StateMachine
             CurrentState = newState;
             CurrentState.Enter(this);
         }
-
-        private void OnDrawGizmos()
-        {
-            CurrentState.Draw(this);
-        }
         
     }
 }

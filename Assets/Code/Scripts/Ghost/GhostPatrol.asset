@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4700fa008ba4bbf4d89c2aa0044f3435, type: 3}
   m_Name: GhostPatrol
   m_EditorClassIdentifier: 
+  speed: 3

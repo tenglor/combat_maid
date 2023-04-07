@@ -10,6 +10,5 @@ namespace Assets.Code.Services.StateMachine
         public virtual void UpdateLogic(StateMachine stateMachine) { }
         public virtual void UpdatePhysics(StateMachine stateMachine) { }
         public virtual void Exit(StateMachine stateMachine) { }
-        public virtual void Draw(StateMachine stateMachine) { }
     }
 }

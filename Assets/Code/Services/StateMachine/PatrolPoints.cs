@@ -34,4 +34,10 @@ public class PatrolPoints : MonoBehaviour
         }
         Gizmos.DrawLine(points[points.Count - 1], points[0]);
     }
+
+    public Vector2 Direction(){
+        Vector2 distance = points[currentIndex] - transform.position;
+        distance.Normalize();
+        return distance;
+    }
 }

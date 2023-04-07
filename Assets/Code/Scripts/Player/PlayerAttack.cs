@@ -57,9 +57,4 @@ public class PlayerAttack : BaseState
         Destroy(attackObject);
     }
 
-    public override void Draw(StateMachine stateMachine)
-    {
-        Gizmos.DrawSphere(stateMachine.transform.position + offset, 0.05f);
-    }
-
 }
