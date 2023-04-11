@@ -41,6 +41,11 @@ public class PlayerJump : MonoBehaviour
             rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             currentJumpCharges--;
         }
+        float limit = 0f;
+        if (rb.velocity.y > limit && !inputService.isJumpPressed) {
+            //rb.velocity = new Vector2(rb.velocity.x, 0f);
+            rb.velocity = new Vector2(rb.velocity.x, limit);
+        }
     }
 
     private void OnDrawGizmosSelected() {

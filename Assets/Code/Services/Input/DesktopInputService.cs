@@ -12,7 +12,7 @@ public class DesktopInputService : IInputService
     private Vector2 SetDesktopAxis() => 
         new Vector2(UnityEngine.Input.GetAxis(Horisontal), UnityEngine.Input.GetAxis(Vertical));
 
-    public bool isJumpPressed => UnityEngine.Input.GetKeyDown(jumpButton);
+    public bool isJumpPressed => UnityEngine.Input.GetKey(jumpButton);
 
     public bool isAttackPressed => UnityEngine.Input.GetKeyDown(attackButton);
 }
